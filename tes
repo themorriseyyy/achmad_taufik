@@ -1,0 +1,48 @@
+Q1 : integrasi testing pengujian yang di fokuskan pada penggabungan modul dan unit yang membentuk fungsional .
+Fungsional testing melakukan verifikasi bahwa seluruh fungsi aplikasi pada perangkat lunak sudah beroperasi sesuai dengan apa yang perancang diharapkan
+Perfomace testing  pengujian non-fungsional dilakukan untuk menentukan parameter sistem dalam hal respon dan stabilitas dalam beban aplikasi/website.
+
+Q2:  saya akan mencatat test script dan test casenya , membuat dokumentasi( capture atau record ). Mencatat environment, membuat report dengan jira
+Q6 : login
+driver.get("https://opensource-demo.orangehrmlive.com/")
+
+driver.find_element_by_id("txtUsername").send_keys("Admin")
+driver.find_element_by_id("txtPassword").send_keys("admin123")
+driver.find_element_by_id("btnLogin").click()
+
+element = driver.find_element_by_xpath("//h1[contains(text(),'Dashboard')]")
+if element.is_displayed():
+    print ("berhasil masuk ke tab dashboard")
+else:
+    print ("tidak berhasil masuk ke tab dashboard")
+    
+  edit 
+  driver.find_element_by_xpath("//b[contains(text(),'Admin')]").click()
+driver.find_element_by_id("menu_admin_UserManagement").click()
+driver.find_element_by_id("searchSystemUser_userName").send_keys("joe.root")
+driver.find_element_by_id("searchBtn").click()
+if element.is_displayed():
+    print ("berhasil edit")
+else:
+    print ("gagal edit")
+    delete
+    driver.find_element_by_xpath("//b[contains(text(),'Admin')]").click()
+driver.find_element_by_id("menu_admin_UserManagement").click()
+driver.find_element_by_id("searchSystemUser_userName").send_keys("joe.root")
+driver.find_element_by_id("Btndelete").click()
+if element.is_displayed():
+    print ("berhasil delete")
+else:
+    print ("gagal delete")
+    
+Q4: radio buttun PM tidak bisa di pilih 
+choose parking a lot tidak berfungsi 
+Q3 : test scario 
+1.1 memastikan user dapat melakukan daftar akun melalui google
+1.2 memastikan user dapat melakukan edit jadwal
+1.3 memastikan user dapat melakukan  delete jadwal
+Q5  17 data
+
+    
+    
+    
